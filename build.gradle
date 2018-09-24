@@ -16,6 +16,7 @@ task('delete-war-at-dpl', type: Delete, dependsOn: 'war') {
   followSymlinks = true
 }
 
+
 task('copy-wars-to-dpl', type: Copy, dependsOn: 'delete-war-at-dpl') {
   println "Copying wars into tomcat deploy-folder."
   from war_source
